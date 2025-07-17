@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Notification Example</title>
+  <style>
+    .div-one {
+      border: 1.5px outset rgb(228, 228, 228);
+      border-radius: 20px;
+      width: 70%;
+      height: auto;
+      text-align: center;
+      padding: 10px;
+      margin-top: 30px;
+      margin-left: 18%;
+    }
+
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #111;
+      overflow-x: hidden;
+      padding-top: 60px;
+      transition: 0.5s;
+    }
+
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+
+    #main {
+      transition: margin-left .5s;
+      padding: 20px;
+    }
+
+    @media screen and (max-height: 450px) {
+      .sidenav {
+        padding-top: 15px;
+      }
+
+      .sidenav a {
+        font-size: 18px;
+      }
+    }
+
+    .div-nav {
+      width: 100%;
+      height: 40px;
+      border: 1px outset #ff5f03;
+      border-radius: 20px;
+      background: white;
+      box-shadow: 1px 1px white;
+      margin-top: 18px;
+    }
+     .div-nav a{
+       color: #ff5f03;
+     }
+    .notify-me {
+      margin-top: -2px;
+      text-align: center;
+      color: #ff5f03;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 8px 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Open button -->
+  <span onclick="openNav()" style="cursor: pointer;">
+    <img src="list-bold.png" style="width: 50px; height: 40px; filter: contrast(20%);">
+  </span>
+
+  <!-- Side navigation -->
+  <div id="mySidenav" class="sidenav">
+    <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="div-nav">
+      <a href="/index.html" class="notify-me">Home</a>
+    </div>
+    <div class="div-nav">
+      <a href="/privacy.html" class="notify-me">privacy</a>
+    </div>
+    <div class="div-nav">
+      <a href="/protect my info.html" class="notify-me">info protection</a>
+    </div>
+  </div>
+
+  <!-- Notification area -->
+  <div class="div-one">
+    <p>nothing to see here!</p>
+    <button onclick="requestNotificationPermission()">Notify Me</button>
+  </div>
+
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+
+    function requestNotificationPermission() {
+      if ("Notification" in window) {
+        Notification.requestPermission().then(permission => {
+          if (permission === "granted") {
+            sendTestNotification();
+          } else {
+            alert("You blocked notifications.");
+          }
+        });
+      } else {
+        alert("Your browser doesn't support notifications.");
+      }
+    }
+
+    function sendTestNotification() {
+      const notification = new Notification("👋 Hello!", {
+        body: "This is a push notification from your site.",
+        icon: "https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+      });
+
+      notification.onclick = () => {
+        window.focus();
+      };
+    }
+  </script>
+</body>
+
+</html>

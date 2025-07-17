@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>welcome to Cacha Fitness.</title>
+  <link rel="stylesheet" href="style.css ">
+  <script src="main.js"></script>
+</head>
+<style>
+body{
+  
+  
+}
+  h1{
+    color: #ff5f03;
+    font-size: 30px;
+   font-family: 'Times New Roman', Times, serif;
+   margin-top: 100px;
+   text-align: center;
+   
+  }
+  h1:first-letter{
+    font-size: 40px;
+    font-style: italic;
+  }
+  section{
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    text-align: left;
+    opacity: 0.9;
+  } /*bog dif */
+  
+  }
+  ul{
+    text-align: left;
+    line-height: 1.6;
+  }
+
+
+  }
+  .second img{
+    width: 288px;
+    height: 171px;
+    max-width: 960px;
+    max-height: 540px;
+    
+
+  }
+  .second a{
+    text-decoration: none;
+    color: black;
+  }
+   .bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  background-color: #10101a;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid #222;
+  z-index: 999;
+  
+}
+
+.new-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #aaa;
+  font-size: 12px;
+  
+}
+  .new-nav img {
+  width: 30px;
+  height: 24px;
+  margin-bottom: 4px;
+  filter: contrast(20%);
+  }
+  .new-nav img:hover {
+   filter: brightness(0) saturate(100%) invert(67%) sepia(34%) saturate(2840%) hue-rotate(348deg) brightness(98%) contrast(107%);
+    
+  }
+  .cool{
+    margin-bottom: 70px;
+  }
+  
+  #fix{
+    line-height: 1.6;
+    margin: 20px;
+    padding: 2px;
+    font-size: px;
+    color: rgba(0, 0, 0, 8);
+    
+  }
+  p{
+    padding:2px;
+    margin: 20px;
+  }
+  /*these is the div im*/
+    .secondgym{
+    width:  352px;
+    height: 198px;
+    max-width: 1056px;
+    max-height: 540px;
+    background-image: url("https://raw.githubusercontent.com/fieme-one/Cacha-fitness/refs/heads/main/gym.jpg");
+    background-size: cover;
+   background-repeat:no-repeat;
+
+   margin-top: 20px;
+   text-align: center;
+   margin-left: 20px;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+  
+  
+  }
+  .secondgym a{
+    text-decoration: none;
+   color: black;
+   margin-top: 100px;
+   
+  }
+  
+  /*img inside div*/
+ #box{
+    width: 40%;
+    height: 15%;
+    background: rgba(0,0,255,0.4);
+    border: none;
+    transition: background 0.5s;
+     margin-top: 10px;
+    border-radius: 30%;
+    border-radius: 20px;
+    animation-name: boxss;
+    animation-duration: 1s;
+    animation-delay: 0s;
+  }
+  @keyframes boxss{
+    0% {margin-top: 100px;
+      width:0%;
+      height:0%;
+      font-size: 0%;
+      
+    }
+    50%{
+      margin-top: 50px;
+      width: 20%;
+      height: 7.5%;
+      font-size: 50%;
+    }
+    
+    
+    100% {margin-top: 10px;
+      width: 40%;
+      height: 15%;
+      font-size: 100%;
+    }
+  }
+  #box:hover{
+    background: rgba(255,95,3,0.6);
+    color: white;
+  }
+  #box:active{
+    background: rgba(255,95,3,1);
+    color: white;
+  }
+  #box:before{
+    background: rgba(255,255,255)
+  
+  }
+  #box:after{
+    background: rgba(255,95,3,1);
+  }
+  #unimp{
+    font-size: 12px;
+    font-weight: noraml;
+    
+margin-left: 0px;
+    text-align: left;
+    color: rgba(255, 255, 255, 0.7);
+    align-content: left;
+  }
+  #insideimg{
+    font-size: 20px;
+    font-weight: bold;
+      color: rgba(255, 255, 255, 1);
+   
+    margin-top: 10px;
+    
+  }
+  .insideme{
+    background: rgba(0, 0, 0, 0.3);
+    text-align: left;
+    width: 80%;
+    height: 40%;
+border-radius: 30% ;
+  margin-left: 30px;
+    font-weight: bold;
+    overflow: auto;
+  box-sizing: border-box;
+  margin-top: 5px;
+  padding: 7px;
+  }
+  #insideme{
+    
+  }
+</style>
+<body>
+   <div class="top-header-pos">
+    <p class="header-all">
+      Cacha
+      <em class="em-one">
+        Fitness </em>
+     </p>
+      <span  class="span-one"  onclick="openNav()">
+     <img src="list-bold.png" style="
+     width: 40px;
+     height: 40px;
+     filter: contrast(20%);
+     ">
+   </span>
+     <a href="notification.html" class="my-notify">
+       <img src="bell-bold.png"
+       style="
+       width: 35px;
+       height: 35px;
+       position: fixed;
+       top: 4px;
+       right: 5px;
+       filter: brightness(0) saturate(100%);
+       transition: opacity 0.3s;
+       ">
+     </a>
+     </div>
+  <div id="mySidenav" class="sidenav">
+    <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="div-nav">
+      <a href="/index.html" class="notify-me">Home</a>
+    </div>
+    <div class="div-nav">
+      <a href="/privacy.html" class="notify-me">privacy</a>
+    </div>
+    <div class="div-nav">
+      <a href="/protect my info.html" class="notify-me">info protection</a>
+    </div>
+  </div>
+
+  <h1>
+    Cacha Fitness
+  </h1>
+  <main id="fix">
+    <section class="one-section">
+      Hey there, and welcome to Cacha Fitness.
+We know life gets busy. Maybe you’ve tried to get fit before, maybe you’ve felt tired, unmotivated, or unsure where to start. That’s okay. You’re not alone — and that’s exactly why we’re here.
+    </section></br>
+    <section>
+      At Cacha Fitness, we built this space for you — the everyday person who wants to feel better, move better, and live better. Whether you want to lose weight, build strength, gain confidence, or just have more energy to get through the day, we’re here to walk that journey with you.
+    </section>
+    </main>
+    <p>
+      We’ll give you everything you need:</p>
+<ul>
+<li>Simple workouts you can do anywhere</li>
+
+<li> Easy nutrition tips that fit your lifestyle</li>
+ 
+<li> motivation when you feel like giving up</li>
+
+<li> Goals that make sense for you, not someone else</li>
+</ul>
+    </p>
+  
+     <div class="secondgym"
+id="gym">
+       <a href="/gym.html/choose-gym.html">
+  <button id="box">
+       Read article</button></a>
+       <div class="insideme"
+       id="insideme">
+       <p id="insideimg">GYM workouts</p>
+       <p id="unimp">this is article is talking about gym workout to improve yourself</p></div>
+       </div> 
+    <div class="secondhome"
+id="home">
+       <a href="/home/home-workout.html">
+  <button id="box">
+       Read article</button></a>
+       <div class="insideme"
+       id="insideme">
+       <p id="insideimg">HOME workouts</p>
+       <p id="unimp">best tools to use while at home </p>       </div> 
+       </div> 
+    <div class="secondyoga"
+id="yoga">
+       <a href="/mental health /mindset.html">
+  <button id="box">
+       Read article</button></a><div class="insideme"
+       id="insideme">
+       <p id="insideimg">YOGA'S and MENTAL HEALTH</p>
+       <p id="unimp">best ways to train you mind </p>       </div> 
+       </div>  
+   <div class="secondnutrition"
+id="nutrition">
+       <a href="/nutrition/nutrition.html">
+  <button id="box">
+       Read article</button></a><div class="insideme"
+       id="insideme">
+       <p id="insideimg">NUTRITION foods</p>       
+       <p id="unimp">this article is talking about best foods to use  to acheaive the body you always desire</p>       </div> 
+       </div> 
+    <div class="secondstrength"
+id="strength">
+       <a href="/strength/strength.html">
+  <button id="box">
+       Read article</button></a><div class="insideme"
+       id="insideme">
+       <p id="insideimg">STRENGTH workouts</p>
+       <p id="unimp">this is article is talking about Strength workout and tips of power lifting</p>
+       </div> 
+           </div> 
+  <div class="down-page">
+      <p class="down-para"><div class="botom-div-allpages"><a href="/index.html">
+        <cite class="cite-one">Cacha</cite></a></br>
+        
+        &COPY; Cacha fitness all right reserved</div></br>
+       <a href="https://youradchoices.com/">adchoices</a>
+</br> <a href="privacy.html">
+  policies</a> </br> <a href="protect my info.html">
+  don't sell or share my info</a></br> <a href="contact.html">
+  contact us</a></br> <a href="mailto:cacha-fitness@gmail.com">
+  send us feedback</a></br> <a href="about us.html">
+  about us</a>
+        
+      </p>
+    </div>
+  <footer class="cool">
+    © 2025 Cacha Fitness. All rights reserved.
+  </footer>
+   <nav class="navbar" id="navbar">
+    <div class="bottom-nav">
+  <a href="index.html" class="new-nav">
+<img src="house-bold.png" class="new-nav">
+    <span>home</span>
+  </a>
+  <a href="reward.html" class="new-nav">
+    <img src="gift-bold.png" alt="more">
+    <span>Reward</span>
+  </a>
+  </nav>
+</div>
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Open Side Nav
+    const span = document.querySelector(".span-one");
+    const close = document.querySelector(".closebtn");
+
+    if (span) {
+      span.addEventListener("click", function () {
+        document.getElementById("mySidenav").style.width = "250px";
+      });
+    }
+
+    if (close) {
+      close.addEventListener("click", function () {
+        document.getElementById("mySidenav").style.width = "0";
+      });
+    }
+  });
+</script>
+</body>
+
+</html>

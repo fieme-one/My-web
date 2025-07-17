@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>get your reward</title>
+  <style>
+  body{
+    background: black;
+    
+  }
+    .reward{
+      background: #adc0de;
+      border: 1.5px outset rgb(224,224,224);
+      width: 125px;
+      height: 65px;
+      text-align: center;
+    position: fixed;
+    top: 250px;
+    right: 115px;
+    border-radius: 60px;
+    box-shadow: 0.5px 2px 3px white;
+    }
+    .reward:hover{
+      background: white;
+      color: black;
+    }
+    .bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  background-color: #10101a;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid #222;
+  z-index: 999;
+  
+}
+
+.new-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #aaa;
+  font-size: 12px;
+  
+}
+  .new-nav img {
+  width: 30px;
+  height: 24px;
+  margin-bottom: 4px;
+  filter: contrast(20%);
+  }
+  .new-nav img:hover {
+   filter: brightness(0) saturate(100%) invert(67%) sepia(34%) saturate(2840%) hue-rotate(348deg) brightness(98%) contrast(107%);
+    
+  }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="bottom-nav">
+  <a href="index.html" class="new-nav">
+<img src="house-bold.png" class="new-nav">
+    <span>home</span>
+  </a>
+  <a href="reward.html" class="new-nav">
+    <img src="gift-bold.png" alt="more">
+    <span>Reward</span>
+  </a>
+  </nav>
+</div>
+  <div class="reward-div" id="reward-div">
+    <button class="reward" id="reward-button">Watch</button>
+  </div>
+</body>
+
+</html>
