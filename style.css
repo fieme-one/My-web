@@ -272,26 +272,9 @@ margin-top: 20px;
      margin-top: 10px;
     border-radius: 30%;
     border-radius: 20px;
-    animation-name: boxss;
 
-    animation-delay: -1s;
   }
-  @keyframes boxss{
-    0% {margin-top: 100px;
-      width:0%;
-      height:0%;
-      font-size: 0%;
-      
-    }
-    
-    
-    
-    100% {margin-top: 10px;
-      width: 40%;
-      height: 15%;
-      font-size: 100%;
-    }
-  }
+ 
   #boxss:hover{
     background: rgba(255,95,3,0.6);
     color: white;
